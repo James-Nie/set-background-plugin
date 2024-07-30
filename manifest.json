@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "页面背景设置插件",
+    "version": "1.0.0",
+    "description": "设置chrome浏览器护眼模式，支持设置背景颜色和背景图片两种模式，图片支持网络图片和本地图片上传",
+    "icons": {
+      "48": "icons/icon48.png",
+      "64": "icons/icon64.png",
+      "128": "icons/icon128.png"
+    },
+    "action":{},
+    "options_ui": {
+        "page": "./src/options.html",
+        "open_in_tab": true
+      },
+    "content_scripts": [
+        {
+          "matches": ["https://*/*", "http://*/*", "<all_urls>"],
+          "js": ["src/main.js"]
+        }
+      ],
+      "background":{
+        "service_worker": "src/service_worker.js"
+      },
+    "permissions": [
+      "storage",
+      "tabs",
+      "activeTab",
+      "downloads",
+      "contextMenus"
+    ]
+  }

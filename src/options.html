@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./options.js"></script>
+</head>
+
+<body>
+  <div>
+    <h2>请选择护眼方式：</h2>
+    <div class="flex">
+      <div class="input-group">
+        <input type="radio" id="color" value="color" name="type">
+        <label for="color">护眼色</label>
+      </div>
+      <div class="input-group">
+        <input type="radio" id="image" value="image" name="type">
+        <label for="image">背景图</label>
+      </div>
+    </div>
+
+    <div id="choose-color" class="color-list flex"></div>
+  </div>
+
+  <div id="choose-image">
+    <h2 class="form-label">当前背景图片</h2>
+    <div class="input-group">
+      <input id="background-image" type="file" class="form-control">
+      <div id="background-image-preview" class="preview">点击选择背景图片</div>
+    </div>
+    <div class="input-group">
+      <span>背景图透明度：</span>
+      <input type="range" min="0" max="0.5" step="0.01" id="background-opacity">
+      <span id="opacity-range"></span>
+    </div>
+    <div class="input-group">
+      <span>背景图饱和度：</span>
+      <input type="range" min="0" max="2" step="0.01" id="background-saturate">
+      <span id="saturate-range"></span>
+    </div>
+    <div class="input-group">
+      <span>背景图对比度：</span>
+      <input type="range" min="0" max="2" step="0.01" id="background-contrast">
+      <span id="contrast-range"></span>
+    </div>
+    <!-- <div class="input-group">
+      <span>缩放：</span>
+      <input type="range" min="0.2" max="1.5" step="0.05" id="background-size">
+      <span id="size-range"></span>
+    </div> -->
+
+    <!-- 图片列表 -->
+    <h2>图片列表</h2>
+    <div id="image-list" class="image-list"></div>
+  </div>
+
+  
+</body>
+
+</html>
